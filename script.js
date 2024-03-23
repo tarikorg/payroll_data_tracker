@@ -12,13 +12,13 @@ const collectEmployees = function () {
     let collectLastName
     let collectSalary
 
-    while (!collectfirstName) {
+    while (!collectfirstName || !isNaN(collectfirstName)) {
       collectfirstName = prompt('Type Employee\'s first name')
     }
-    while (!collectLastName) {
+    while (!collectLastName || !isNaN(collectLastName)) {
       collectLastName = prompt('Type Employee\'s last name')
     }
-    while (!collectSalary) {
+    while (!collectSalary || isNaN(collectSalary)) {
       collectSalary = prompt('Type Employee\'s Salary')
     }
 
@@ -43,11 +43,20 @@ const collectEmployees = function () {
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
+  // array reduce method => get all data on salary
+  const average = employeesArray.reduce((a, b) => (a + b.salary), 0) / employeesArray.length
+  console.log('Average salary between our ' + (employeesArray.length - 1) + 'employee(s) is ' + average)
 }
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
+  //create a random index for the array
+  const randomIndex = Math.floor(Math.random() * employeesArray.length);
+  const randomEmployee = employeesArray[randomIndex] // access the random employee index 
+  console.log(`Congratulations to  ${randomEmployee.firstName}  ${randomEmployee.lastName} , our random winner!`)
+
+
 }
 
 /*
