@@ -32,9 +32,7 @@ const collectEmployees = function () {
 
     const continuation = confirm('Click ok to add more employee data')
 
-    if (!continuation) {
-      keepAdding = false
-    }
+   keepAdding = continuation
 
   }
   return employees
