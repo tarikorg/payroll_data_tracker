@@ -5,6 +5,9 @@
 ## Description
 This work was created for storing data of the employee(s) of a company. The data contains First name, Last name and Salary of the employee. It contains notes on HTML/CSS/JS .
 
+## Screenshot
+ <image src="./image/payroll-tracker.png">
+
 ## Installation
 N/A
 
